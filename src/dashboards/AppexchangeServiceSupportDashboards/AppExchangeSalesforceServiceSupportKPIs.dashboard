@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <description>Collection of dashboard components to monitor KPI&apos;s</description>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases were opened through each channel month to date.</footer>
+            <header>Opened cases MTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIOpenedCasesbyChannelMTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>by Channel</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases were opened through each channel year to date.</footer>
+            <header>Opened Cases YTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIOpenedCasesbyChannelYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>By Channel</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component is intended to identify the average amount of time your cases are in each stage?  This will allow you to identify bottlenecks in your support process.</footer>
+            <header>Average Stage Duration</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIAverageDurationperStage</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Avg time (in hrs) stage</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component will show you how many of solutions you have in the different stages of the publishing process.</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSKPISolutionStatus</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Solution Status</title>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>LineGrouped</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This components shows how many cases were created on the web each week for the current and previous month.  This will allow you to identify how well your efforts are going if one of your KPI&apos;s is to increase web based case creation volume.</footer>
+            <header>Case Volume by Channel</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIWeeklyTrendingCasesFQ</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Weekly Trending</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnGrouped</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases were opened each month by type.</footer>
+            <header>Cases created by Type</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPICasescreatedbyTypeYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueAscending</sortBy>
+            <title>Monthly Trending</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Bar</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases were closed on the portal each week.  An increase in volume of cases closed on the SSP can have a significant impact on the cost of resolution per case.</footer>
+            <header>Closed on SSP</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPICasesclosedbySSP</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Monthly Trending</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows you how many Self Service Portal users were created for each account YTD.  This is meant to provide insight into how much traction there is in getting your customers to leverage the SSP.</footer>
+            <header>New users created for the SSP</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSKPISSPUserscreatedbyAcctYTD</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>By Account-YTD</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarGrouped</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>What types of cases are being opened each month.  You can point this at case reason or a product/asset list to see if product issues are causing spikes in case creation.</footer>
+            <header># of Cases by Month by Reason</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIMonthlyTrendCasesbyReason</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases each week were closed in under 24 hrs.  This &quot;One and Done&quot; metric is a KPI often tracked by call centers looking to reduce the cost of support.</footer>
+            <header>Closed in &lt; 24 hrs</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPICasesclosedin24hrs</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>One and Done</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component will show you how many open cases there are in each stage of your case handling process.</footer>
+            <header>Open Cases by Stage</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyStage</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows you how many cases are in each of your queue&apos;s.  This will quickly call to attention any queue&apos;s that might need additional management.</footer>
+            <header>Open cases by Queue</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyQueue</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows how many open cases there for each level of priority.</footer>
+            <header>Open Cases by Priority</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyPriority</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows how many cases are open by Reason.</footer>
+            <header>Open Cases by Reason</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIOpenCasesbyReason</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarGrouped</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Monthly trends that show what types of cases are being opened each month.</footer>
+            <header>Monthly Trends by Type</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSKPIMonthlyTrendCasesbyType</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>knakajima@service-support-dash.labs</runningUser>
+    <textColor>#000000</textColor>
+    <title>AppExchange Salesforce Service &amp; Support - KPI&apos;s</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <description>A dashboard with components to track important customer related metrics.</description>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows the top 10 customers based on the number of open cases they have at this time. The results are also color coded so that accounts with more than 10 open cases are highlighted in red and 5-10 open cases are in yellow. Max values is 10.</footer>
+            <header>New Cases Opened by Account MTD</header>
+            <indicatorBreakpoint1>5.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>10.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustNewcasesbyAccountMTD</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Top 10</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows the number of cases opened by each account, by channel, for the year. The results can be used to help identify which customers you might want to focus on pushing to lower cost channels. Max values returned has been set to 10.</footer>
+            <header>New Cases Opened by Account-Channel YTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>10</maxValuesDisplayed>
+            <report>AppExchangeServiceSupportDB/APXSSSCustNewcasesAccountChannelYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component will show you how many cases are open for each account at this time.  Edit this dashboard component to set Indicator Color breakpoints for visual warnings on high case volumes. Max values returned has been set to 10.</footer>
+            <header>All Open Cases</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustSumofopencases</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>Total of closed cases by account for the current FY</footer>
+            <header>Total closed cases</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustSumofclosedcases</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>By Account</title>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how much time is being spent (in hours) supporting each of your accounts. Max values returned has been set to 10.</footer>
+            <header>Time spent by Account YTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>10</maxValuesDisplayed>
+            <report>AppExchangeServiceSupportDB/APXSSSCustTotTimebyAccountYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>In Hours</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows how many cases required escalation.  A high volume of escalations could indicate a need from some pro-active communications from support management.  Set the breakpoint indicator colors for the DB component for added visibility.</footer>
+            <header>Escalated Case by Account</header>
+            <indicatorBreakpoint1>4.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>10.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustEscalatedcasesMTD</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Month to Date</title>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows how many cases required escalation.  A high volume of escalations could indicate a need from some pro-active communications from support management.  Set the breakpoint indicator colors for the DB component for added visibility.</footer>
+            <header>Escalated Case by Account</header>
+            <indicatorBreakpoint1>4.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>10.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustEscalatedcasesYTD</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Year to Date</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>LineGrouped</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Weekly trending will allow you to identify unexpected spikes in activity that might call from some proactive customer communications.  Max values has been set to 10.</footer>
+            <header>Open Case per Account YTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <maxValuesDisplayed>10</maxValuesDisplayed>
+            <report>AppExchangeServiceSupportDB/APXSSSCustNewcasesAccountWeekYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Weekly Trending</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Average age of all cases by account for the current FY.  Max values set to 10.</footer>
+            <header>Average Case Age</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSCustAvgcaseageperaccount</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>By Account in hours</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component shows which customers have open HIGH priority cases.  It is color coded so that any customer with more than 3 open HIGH priority cases will be shown in red. Max values returned has been set to 10.</footer>
+            <header>Accounts to Watch</header>
+            <indicatorBreakpoint2>3.0</indicatorBreakpoint2>
+            <indicatorHighColor>#C25454</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustOpenHIGHprioritycases</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open HIGH priority cases</title>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component will show you how many high priority cases have been opened this month by each account.  A high volume of open cases could be a good reason to have support managment proactively reach out to a customer. Max values returned set to 10.</footer>
+            <header>High Priority Cases opened MTD</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustHIGHprioritycasesMTD</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component will show you how many high priority cases have been opened this year by each account.  A high volume of open cases could be a good reason to have support managment proactively reach out to. Max values returned has been set to 10.</footer>
+            <header>High Priority Cases opened YTD</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSCustHIGHprioritycasesYTD</report>
+            <sortBy>RowLabelAscending</sortBy>
+        </components>
+    </rightSection>
+    <runningUser>knakajima@service-support-dash.labs</runningUser>
+    <textColor>#000000</textColor>
+    <title>AppExchange Salesforce Service &amp; Support - Customer Information</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

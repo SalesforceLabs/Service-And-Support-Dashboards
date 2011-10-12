@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <description>A dashboard with components tracking individual call center representative performance</description>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This component will show you how many open cases each rep has in stacked ranked order.</footer>
+            <header>Current Workload</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepList</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Open Cases per Rep</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases each rep has open and what is the priority level of each case.  You can use this to monitor workload distribution, helping you identify anyone who has too many high priority open cases and might need assistance.</footer>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepbyPriority</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueAscending</sortBy>
+            <title>Open Cases by Priority</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows the average age of all the open cases for each rep.  This can be used to spot outliers and/or manage the workload of each rep.</footer>
+            <header>Age of open cases by Rep</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepAgeofOpenCases</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>In Hours</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>What is the average time it is taking each rep to close their cases.</footer>
+            <header>Average time to close</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepAvgResolutionTimebyRepMTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Per rep in hrs</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows which rep has closed the most cases this month.  If you have a large # of reps you can edit the DB component and set the Maximum Values Displayed to the top X and use it like a leaderboard for top case closers.</footer>
+            <header>Closed cases by Rep</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepClosedCaseRepStatusMTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>This Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows which rep has closed the most cases.  If you have a large # of reps you can edit the DB component and set the Maximum Values Displayed to the top X and use it like a leaderboard for top case closers.</footer>
+            <header>Closed cases by Rep</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepClosedCaseRepStatusYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>This Year</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component will show you the sum of all the hours spent by rep based on the history of when they owned a case. This will give you and idea how much time each rep is spending on each closed case.</footer>
+            <header>Time spent by Rep on closed cases MTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepTimeforclosedperRepMTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>In hours for this month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Column</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component will show you the sum of all the hours spent by rep based on the history of when they owned a case. This will give you and idea how much time each rep is spending on each closed case.</footer>
+            <header>Time spent by Rep on closed cases YTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepTimeforclosedperRepYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>In hours for this year</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <componentType>Table</componentType>
+            <footer>This is the average of the duration of all cases per rep for the current Fiscal Quarter</footer>
+            <header>Average Handle Time</header>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>AppExchangeServiceSupportDB/APXSSSRepAverageDurationperRep</report>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Per Rep (in hrs)</title>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows how many cases each rep has open and what the status is for each case.  You can use this to help identify workload issues.</footer>
+            <header>Status of open cases by Rep</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepOpenCasesbyAgentbyStatus</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueAscending</sortBy>
+            <title>Agent Productivity</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows what channel each open case for each rep came from.</footer>
+            <header>Open Cases by Rep per Channel MTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepChannelMTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>This Month</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This component shows what channel each open case for each rep came from for this calendar year.</footer>
+            <header>Open Cases by Rep per Channel YTD</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepOpenCasesRepChannelYTD</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>This Year</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>This components shows what type of cases each rep is working on.</footer>
+            <header>Open Cases by Type</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>AppExchangeServiceSupportDB/APXSSSRepAgentCaseLoadbyCaseType</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueAscending</sortBy>
+            <title>Agent Productivity</title>
+            <useReportChart>false</useReportChart>
+        </components>
+    </rightSection>
+    <runningUser>knakajima@service-support-dash.labs</runningUser>
+    <textColor>#000000</textColor>
+    <title>AppExchange Salesforce Service &amp; Support - Rep/Agent Performance</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>
